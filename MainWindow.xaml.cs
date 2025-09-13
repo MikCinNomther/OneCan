@@ -142,8 +142,12 @@ namespace OneCan
             }
         }
         Thread TanaTh = null;
+        bool DontTana = false;
         public void TranaFrame(Page frame)
         {
+            if (DontTana)
+                return;
+            DontTana = true;
             int ywidth = (int)this.NowFrame.ActualWidth;
             if(TanaTh != null)
             {
@@ -155,7 +159,9 @@ namespace OneCan
                         TanaTh.Suspend();
                     }
                 }
-                catch { }
+                catch {
+                    return;
+                }
                 finally
                 {
                     TanaTh = null;
@@ -163,7 +169,7 @@ namespace OneCan
             }
             TanaTh = new Thread(() =>
             {
-                for(int i = 0;i < ywidth;i++)
+                for(int i = 0;i < ywidth;i+=5)
                 {
                     this.Dispatcher.Invoke(() =>
                     {
@@ -175,7 +181,7 @@ namespace OneCan
                 {
                     this.NowFrame.Content = frame;
                 });
-                while(ywidth-- >= 0)
+                while((ywidth-=4) >= 0)
                 {
                     this.Dispatcher.Invoke(() =>
                     {
@@ -184,6 +190,7 @@ namespace OneCan
                     Thread.Sleep(1);
                 }
                 TanaTh = null;
+                DontTana = false;
             });
             TanaTh.Start();
         }

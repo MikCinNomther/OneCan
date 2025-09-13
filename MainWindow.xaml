@@ -65,10 +65,12 @@
                 </Frame>
             </Grid>
             <Grid Grid.Column="1">
-                <Frame NavigationUIVisibility="Hidden" x:Name="NowFrame"/>
+                <Grid Margin="0,0,5,5">
+                    <Frame NavigationUIVisibility="Hidden" x:Name="NowFrame"/>
+                </Grid>
             </Grid>
             <Grid Background="Gray" Width="0.5" HorizontalAlignment="Left" Margin="79.75,0,0,0" Grid.Column="0" Grid.ColumnSpan="2"/>
         </Grid>
-        <Border Height="20" VerticalAlignment="Bottom" Background="Transparent" Grid.Row="0" Grid.RowSpan="2" BorderBrush="Gray" Margin="0,0,0,0" CornerRadius="0,0,10,10" BorderThickness="1.5,0,1.5,1.5"/>
+        <Border Grid.Row="0" Grid.RowSpan="2" BorderBrush="Gray" Margin="0,30,0,0" CornerRadius="0,0,10,10" BorderThickness="1.5,0,1.5,1.5"/>
     </Grid>
 </Window>

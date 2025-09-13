@@ -31,6 +31,10 @@ namespace OneCan.Controls
             {
                 MainWindow.App.TranaFrame(ApplicationValues.Menu);
             };
+            this.QM.Click += (sender, e) =>
+            {
+                MainWindow.App.TranaFrame(ApplicationValues.QM);
+            };
         }
     }
 }
