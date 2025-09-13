@@ -1,0 +1,27 @@
+﻿<Application x:Class="OneCan.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:OneCan"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <SolidColorBrush Color="White" x:Key="GridBackground"/>
+        <SolidColorBrush Color="Black" x:Key="Foreground"/>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{DynamicResource Foreground}"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Foreground" Value="{DynamicResource Foreground}"/>
+            <Setter Property="Background" Value="{DynamicResource GridBackground}"/>
+        </Style>
+        <Style TargetType="Grid">
+            <Setter Property="Background" Value="{DynamicResource GridBackground}"/>
+        </Style>
+        <Style TargetType="Window" x:Key="WindowUI">
+            <Setter Property="AllowsTransparency" Value="True"/>
+            <Setter Property="WindowStyle" Value="None"/>
+            <Setter Property="Title" Value="OneCan"/>
+            <Setter Property="Icon" Value="/Resources/Ae.ico"/>
+            <Setter Property="ResizeMode" Value="CanResizeWithGrip"/>
+        </Style>
+    </Application.Resources>
+</Application>

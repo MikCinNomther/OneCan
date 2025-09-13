@@ -1,0 +1,35 @@
+﻿<Window x:Class="OneCan.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OneCan"
+        mc:Ignorable="d"
+        Height="450" Width="800"
+        Style="{DynamicResource WindowUI}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Border BorderThickness="1" BorderBrush="Gray">
+                <Image Source="/Resources/Ae.ico" HorizontalAlignment="Left"/>
+                
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                <Frame NavigationUIVisibility="Hidden"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Frame NavigationUIVisibility="Hidden"/>
+            </Grid>
+            <Grid Background="Gray" Width="1" HorizontalAlignment="Left" Margin="199.5,0,0,0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        </Grid>
+    </Grid>
+</Window>
