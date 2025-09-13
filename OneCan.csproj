@@ -10,17 +10,23 @@
 
   <ItemGroup>
     <None Remove="Resources\Ae.ico" />
+    <None Remove="Resources\Block.png" />
+    <None Remove="Resources\Editor.png" />
+    <None Remove="Resources\Home.png" />
+    <None Remove="Resources\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\" />
-    <Folder Include="Controls\" />
     <Folder Include="Kernel\" />
-	  <Folder Include="Resources\"/>
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Resources\Ae.ico" />
+    <Resource Include="Resources\Block.png" />
+    <Resource Include="Resources\Editor.png" />
+    <Resource Include="Resources\Home.png" />
+    <Resource Include="Resources\Settings.png" />
+    <Resource Include="Resources\Style.png" />
   </ItemGroup>
 
 </Project>

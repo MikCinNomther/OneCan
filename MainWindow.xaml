@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OneCan"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        xmlns:cn="clr-namespace:OneCan.Controls"
         Height="450" Width="800"
         Style="{DynamicResource WindowUI}">
     <Grid>
@@ -12,24 +14,61 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="0" x:Name="TitleBar" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown">
             <Border BorderThickness="1" BorderBrush="Gray">
-                <Image Source="/Resources/Ae.ico" HorizontalAlignment="Left"/>
-                
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="90"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="/Resources/Ae.ico" HorizontalAlignment="Left"/>
+                    <Grid Grid.Column="1">
+                        <TextBlock HorizontalAlignment="Left" Text="OneCan" FontSize="20" VerticalAlignment="Center"/>
+                        <Button MouseRightButtonDown="TraingeStyle_MouseDoubleClick" BorderBrush="Transparent" x:Name="TraingeStyle" Click="TraingeStyle_Click" Margin="5,5,25,5" HorizontalAlignment="Right">
+                            <Image Source="/Resources/Style.png" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform x:Name="TraingeStyler" Angle="0"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                        </Button>
+                    </Grid>
+                    <WrapPanel Grid.Column="2">
+                        <Button x:Name="ToMin" Click="ToMin_Click" BorderBrush="Transparent" Height="30" Width="30">
+                            <TextBlock Text="-" FontSize="25" Margin="2,-5,0,0"/>
+                        </Button>
+                        <Button x:Name="ToMax" Click="ToMax_Click" BorderBrush="Transparent" Height="30" Width="30">
+                            <TextBlock Text="□" FontSize="15" Margin="0,-3,0,0"/>
+                        </Button>
+                        <Button Width="30" x:Name="ToClose" Click="ToClose_Click" BorderBrush="Transparent" Height="30">
+                            <TextBlock Text="×" FontSize="20" Margin="0,-4,0,0"/>
+                        </Button>
+                    </WrapPanel>
+                </Grid>
             </Border>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="80"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid Grid.Column="0">
-                <Frame NavigationUIVisibility="Hidden"/>
+                <Frame NavigationUIVisibility="Hidden">
+                    <Frame.Content>
+                        <cn:Sidebar/>
+                    </Frame.Content>
+                </Frame>
             </Grid>
             <Grid Grid.Column="1">
-                <Frame NavigationUIVisibility="Hidden"/>
+                <Frame NavigationUIVisibility="Hidden" x:Name="NowFrame"/>
             </Grid>
-            <Grid Background="Gray" Width="1" HorizontalAlignment="Left" Margin="199.5,0,0,0" Grid.Column="0" Grid.ColumnSpan="2"/>
+            <Grid Background="Gray" Width="0.5" HorizontalAlignment="Left" Margin="79.75,0,0,0" Grid.Column="0" Grid.ColumnSpan="2"/>
         </Grid>
+        <Border Height="20" VerticalAlignment="Bottom" Background="Transparent" Grid.Row="0" Grid.RowSpan="2" BorderBrush="Gray" Margin="0,0,0,0" CornerRadius="0,0,10,10" BorderThickness="1.5,0,1.5,1.5"/>
     </Grid>
 </Window>

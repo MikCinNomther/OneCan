@@ -4,7 +4,10 @@
              xmlns:local="clr-namespace:OneCan"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <SolidColorBrush Color="White" x:Key="GridBackground"/>
+        <!--
+        <SolidColorBrush Color="Black" x:Key="GridBackground"/>
+        <SolidColorBrush Color="White" x:Key="Foreground"/>
+        --><SolidColorBrush Color="White" x:Key="GridBackground"/>
         <SolidColorBrush Color="Black" x:Key="Foreground"/>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="{DynamicResource Foreground}"/>
@@ -15,6 +18,10 @@
         </Style>
         <Style TargetType="Grid">
             <Setter Property="Background" Value="{DynamicResource GridBackground}"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{DynamicResource GridBackground}"/>
+            <Setter Property="Foreground" Value="{DynamicResource Foreground}"/>
         </Style>
         <Style TargetType="Window" x:Key="WindowUI">
             <Setter Property="AllowsTransparency" Value="True"/>

@@ -1,0 +1,27 @@
+﻿<Page x:Class="OneCan.Controls.Sidebar"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OneCan.Controls"
+      mc:Ignorable="d" 
+      xmlns:cn="clr-namespace:OneCan.Controls"
+      d:DesignHeight="450" Width="80"
+      Loaded="Page_Loaded"
+      Title="Sidebar">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+            <WrapPanel>
+                <cn:SidebarItem x:Name="Home" ButtonIcon="/Resources/Home.png" ButtonText="主页" VerticalAlignment="Top"/>
+                <cn:SidebarItem x:Name="QM" ButtonIcon="/Resources/Block.png" ButtonText="高通" VerticalAlignment="Top"/>
+                <cn:SidebarItem ButtonIcon="/Resources/Block.png" ButtonText="联发科" VerticalAlignment="Top"/>
+                <cn:SidebarItem ButtonIcon="/Resources/Block.png" ButtonText="展锐" VerticalAlignment="Top"/>
+                <cn:SidebarItem ButtonIcon="/Resources/Block.png" ButtonText="瑞芯微" VerticalAlignment="Top"/>
+                <cn:SidebarItem ButtonIcon="/Resources/Editor.png" ButtonText="ADB" VerticalAlignment="Top"/>
+                <cn:SidebarItem ButtonIcon="/Resources/Editor.png" ButtonText="FastBoot" VerticalAlignment="Top"/>
+                <cn:SidebarItem ButtonIcon="/Resources/Settings.png" ButtonText="设置" VerticalAlignment="Top"/>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
