@@ -1,0 +1,29 @@
+﻿<Page x:Class="AndroidCat.Pages.ActivityApplication"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AndroidCat.Pages" xmlns:controls="clr-namespace:AndroidCat.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ActivityApplication">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <WrapPanel>
+                <controls:IconTextButton Click="IconTextButton_Click_5" IconText="激活FreezeYou" IconSource="/AndroidCat/Resource/freezeyou.jpg"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_1" IconText="激活小黑屋(DA)" IconSource="/AndroidCat/Resource/web1n.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_2" IconText="激活小黑屋(ADB)" IconSource="/AndroidCat/Resource/web1n.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click" IconText="激活Shizuku" IconSource="/AndroidCat/Resource/shizuku.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_7" IconText="激活第二空間" IconSource="/AndroidCat/Resource/twospac.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_3" IconText="激活冰箱" IconSource="/AndroidCat/Resource/icobox.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_6" IconText="激活太極" IconSource="/AndroidCat/Resource/tarc.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_4" IconText="激活黑閥" IconSource="/AndroidCat/Resource/blacka.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_8" IconText="激活島" IconSource="/AndroidCat/Resource/island.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_9" IconText="激活黑洞" IconSource="/AndroidCat/Resource/blackhole.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_10" IconText="激活空調狗" IconSource="/AndroidCat/Resource/hotoug.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_11" IconText="激活绿色守护" IconSource="/AndroidCat/Resource/gresa.png"></controls:IconTextButton>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

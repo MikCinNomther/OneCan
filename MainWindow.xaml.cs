@@ -22,6 +22,7 @@ namespace OneCan
         {
             InitializeComponent();
             App = this;
+            this.Closing += OnFormClosing;
         }
 
         private void ToMin_Click(object sender, RoutedEventArgs e)
@@ -36,7 +37,16 @@ namespace OneCan
 
         private void ToClose_Click(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("您希望退出OneCan吗？","提示",MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.Yes)
+            this.Close();
+        }
+
+        private void OnFormClosing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if(MessageBox.Show("您希望退出OneCan吗？","提示",MessageBoxButton.YesNo,MessageBoxImage.Question) == MessageBoxResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
             {
                 Application.Current.Shutdown();
             }
@@ -81,6 +91,7 @@ namespace OneCan
         {
             tmp_1 = Brusheses[NextBrush];
             Application.Current.Resources["GridBackground"] = tmp_1[0];
+            Application.Current.Resources["Foreground"] = tmp_1[1];
             new Task(() =>
             {
                 try { 
@@ -92,10 +103,6 @@ namespace OneCan
                         });
                         Thread.Sleep(2);
                     }
-                    this.Dispatcher.Invoke(() =>
-                    {
-                        Application.Current.Resources["Foreground"] = tmp_1[1];
-                    });
                 } catch { return; };
             }).Start();
         }

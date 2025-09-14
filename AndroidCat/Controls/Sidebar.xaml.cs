@@ -1,5 +1,4 @@
-﻿using OneCan.Kernel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,25 +13,36 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OneCan.Pages
+namespace AndroidCat.Controls
 {
     /// <summary>
-    /// Menu.xaml 的交互逻辑
+    /// Sidebar.xaml 的交互逻辑
     /// </summary>
-    public partial class Menu : Page
+    public partial class Sidebar : Page
     {
-        public Menu()
+        public Sidebar()
         {
             InitializeComponent();
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            this.GoToGithub.DasButton.Click += (sender, e) =>
-            {
-                Conhost conhost = new Conhost("cmd.exe",null,true,false,true);
-                conhost.StartWithCommand("start http://github.com/MikCinNomther/OneCan");
-            };
+
+        }
+
+        public void AddItem(string name,Page Content) 
+        {
+            WP.Children.Add(new SidebarItem(Content, name));
+        }
+
+        public void Init()
+        {
+            WP.Children.Clear();
+        }
+
+        private void Page_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }

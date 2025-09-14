@@ -1,5 +1,4 @@
-﻿using OneCan.Kernel;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,22 +16,13 @@ using System.Windows.Shapes;
 namespace OneCan.Pages
 {
     /// <summary>
-    /// Menu.xaml 的交互逻辑
+    /// MTK.xaml 的交互逻辑
     /// </summary>
-    public partial class Menu : Page
+    public partial class MTK : Page
     {
-        public Menu()
+        public MTK()
         {
             InitializeComponent();
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.GoToGithub.DasButton.Click += (sender, e) =>
-            {
-                Conhost conhost = new Conhost("cmd.exe",null,true,false,true);
-                conhost.StartWithCommand("start http://github.com/MikCinNomther/OneCan");
-            };
         }
     }
 }

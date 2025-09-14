@@ -9,18 +9,52 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AndroidCat\emo_im_laughing.png" />
+    <None Remove="AndroidCat\Resource\agsd.jpg" />
+    <None Remove="AndroidCat\Resource\blacka.png" />
+    <None Remove="AndroidCat\Resource\blackhole.png" />
+    <None Remove="AndroidCat\Resource\freezeyou.jpg" />
+    <None Remove="AndroidCat\Resource\fs.png" />
+    <None Remove="AndroidCat\Resource\gresa.png" />
+    <None Remove="AndroidCat\Resource\hotoug.png" />
+    <None Remove="AndroidCat\Resource\icobox.png" />
+    <None Remove="AndroidCat\Resource\island.png" />
+    <None Remove="AndroidCat\Resource\rfds.webp" />
+    <None Remove="AndroidCat\Resource\shizuku.png" />
+    <None Remove="AndroidCat\Resource\tarc.png" />
+    <None Remove="AndroidCat\Resource\twospac.png" />
+    <None Remove="AndroidCat\Resource\usad.png" />
+    <None Remove="AndroidCat\Resource\web1n.png" />
     <None Remove="Resources\Ae.ico" />
     <None Remove="Resources\Block.png" />
     <None Remove="Resources\Editor.png" />
     <None Remove="Resources\Home.png" />
+    <None Remove="Resources\ProjectFile.png" />
     <None Remove="Resources\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="AndroidCat\emo_im_laughing.png" />
+    <Resource Include="AndroidCat\Resource\agsd.jpg" />
+    <Resource Include="AndroidCat\Resource\blacka.png" />
+    <Resource Include="AndroidCat\Resource\blackhole.png" />
+    <Resource Include="AndroidCat\Resource\freezeyou.jpg" />
+    <Resource Include="AndroidCat\Resource\fs.png" />
+    <Resource Include="AndroidCat\Resource\gresa.png" />
+    <Resource Include="AndroidCat\Resource\hotoug.png" />
+    <Resource Include="AndroidCat\Resource\icobox.png" />
+    <Resource Include="AndroidCat\Resource\island.png" />
+    <Resource Include="AndroidCat\Resource\rfds.webp" />
+    <Resource Include="AndroidCat\Resource\shizuku.png" />
+    <Resource Include="AndroidCat\Resource\tarc.png" />
+    <Resource Include="AndroidCat\Resource\twospac.png" />
+    <Resource Include="AndroidCat\Resource\usad.png" />
+    <Resource Include="AndroidCat\Resource\web1n.png" />
     <Resource Include="Resources\Ae.ico" />
     <Resource Include="Resources\Block.png" />
     <Resource Include="Resources\Editor.png" />
     <Resource Include="Resources\Home.png" />
+    <Resource Include="Resources\ProjectFile.png" />
     <Resource Include="Resources\Settings.png" />
     <Resource Include="Resources\Style.png" />
   </ItemGroup>

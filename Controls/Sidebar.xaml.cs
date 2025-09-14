@@ -35,6 +35,22 @@ namespace OneCan.Controls
             {
                 MainWindow.App.TranaFrame(ApplicationValues.QM);
             };
+            this.MTK.Click += (sender, e) =>
+            {
+                MainWindow.App.TranaFrame(ApplicationValues.MTK);
+            };
+            this.Unisoc.Click += (sender, e) =>
+            {
+                MainWindow.App.TranaFrame(ApplicationValues.Unisoc);
+            };
+            this.RK.Click += (sender, e) =>
+            {
+                MainWindow.App.TranaFrame(ApplicationValues.RK);
+            };
+            this.AndroidCat.Click += (sender, e) =>
+            {
+                MainWindow.App.TranaFrame(ApplicationValues.AndroidCat);
+            };
         }
     }
 }

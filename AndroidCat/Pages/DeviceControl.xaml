@@ -1,0 +1,24 @@
+﻿<Page x:Class="AndroidCat.Pages.DeviceControl"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AndroidCat.Pages" xmlns:controls="clr-namespace:AndroidCat.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DeviceControl">
+
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <WrapPanel>
+                <controls:IconTextButton Click="IconTextButton_Click" IconText="暴力清空所有賬號" IconSource="/AndroidCat/Resource/usad.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_1" IconText="清空設備管理員" IconSource="/AndroidCat/Resource/usad.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_2" IconText="暴力清空所有用戶" IconSource="/AndroidCat/Resource/usad.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_3" IconText="ADB推送文件" IconSource="/AndroidCat/Resource/fs.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_4" IconText="Rec推送文件" IconSource="/AndroidCat/Resource/fs.png"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_5" IconText="ADB修改DPI" IconSource="/AndroidCat/Resource/rfds.webp"></controls:IconTextButton>
+                <controls:IconTextButton Click="IconTextButton_Click_6" IconSource="/AndroidCat/emo_im_laughing.png" IconText="锁定BL(Fastboot)"/>
+            </WrapPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

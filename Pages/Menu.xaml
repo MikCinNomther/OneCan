@@ -4,13 +4,52 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OneCan.Pages"
+      Loaded="Page_Loaded"
       mc:Ignorable="d" 
+      xmlns:cn="clr-namespace:OneCan.Controls"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Menu">
 
     <Grid>
         <GroupBox Header="主页">
-            <TextBlock Text="OneCan" FontSize="50" HorizontalAlignment="Right"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                <Grid VerticalAlignment="Top" x:Name="InfoBox">
+                    <TextBlock Text="OneCan" FontSize="50" HorizontalAlignment="Right"/>
+                    <Image VerticalAlignment="Top" HorizontalAlignment="Left" Width="60" Source="/Resources/Ae.ico"/>
+                    <Grid Height="0.1" VerticalAlignment="Top" Background="Gray" Margin="60,65,60,0"/>
+                    <TextBlock x:Name="InfoText" FontSize="25" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Margin="25,75,25,30" FontFamily="KaiTi"><Run Text="&#x9;OneCan是一个集成了多个平台刷机功能的玩机工具，以高稳定性、直观的GUI为特色，长期以来坚持开源免费，"/><LineBreak/><Run Text="&#x9;"/><Run Text="我们"/><Run Text="在此感谢所有用户的支持，也期待有更多的新人加入OneCan项目，"/><Run Language="zh-cn" Text="我们将持续以最大的动力维护该项目"/></TextBlock>
+                </Grid>
+                <Grid Grid.Row="1" Background="Transparent">
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*" MaxWidth="900" MinWidth="600"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid Background="Transparent" Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                    <RowDefinition MaxHeight="80" Height="*"/>
+                                    <RowDefinition MaxHeight="80" Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <cn:IconButton x:Name="GoToGithub" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton Grid.Row="0" Grid.Column="1" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton Grid.Row="0" Grid.Column="2" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton Grid.Row="1" Grid.Column="0" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton Grid.Row="1" Grid.Column="1" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
+                            <cn:IconButton Grid.Row="1" Grid.Column="2" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
         </GroupBox>
     </Grid>
 </Page>

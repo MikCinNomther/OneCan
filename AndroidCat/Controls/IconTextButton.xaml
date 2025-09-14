@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="AndroidCat.Controls.IconTextButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AndroidCat.Controls"
+             Loaded="UserControl_Loaded"
+             ToolTip="{Binding ElementName=Text, Path=Text}"
+             mc:Ignorable="d" 
+             Height="100" Width="80">
+    <Button Click="Button_Click" Background="Transparent" BorderBrush="Transparent">
+        <Grid Height="100" Width="80" Background="Transparent">
+            <Image VerticalAlignment="Top" Height="70" Margin="5" Width="70" x:Name="Image"/>
+            <TextBlock HorizontalAlignment="Center" x:Name="Text" VerticalAlignment="Bottom" FontSize="8" Margin="0,0,0,5"/>
+        </Grid>
+    </Button>
+</UserControl>
