@@ -75,7 +75,16 @@ namespace OneCan
             },new Brush[]
             {
                 new SolidColorBrush(Color.FromRgb(255,127,127)),new SolidColorBrush(Colors.White)
-            },
+            },new Brush[]
+            {
+                new SolidColorBrush(Colors.Green),new SolidColorBrush(Colors.White)
+            },new Brush[]
+            {
+                new SolidColorBrush(Colors.Red),new SolidColorBrush(Colors.Yellow)
+            },new Brush[]
+            {
+                new SolidColorBrush(Color.FromRgb(180,185,255)),new SolidColorBrush(Colors.DarkGray)
+            }
         };
         private static int BrushIndex = 0;
         int NextBrush
@@ -198,10 +207,15 @@ namespace OneCan
                 }
                 TanaTh = null;
                 DontTana = false;
+                if ((Taname++) >= 5)
+                {
+                    GC.Collect();
+                    Taname = 1;
+                }
             });
             TanaTh.Start();
         }
-
+        int Taname = 1;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             this.NowFrame.Content = ApplicationValues.Menu;

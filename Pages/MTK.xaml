@@ -5,12 +5,44 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OneCan.Pages"
       mc:Ignorable="d" 
+      Loaded="Page_Loaded"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MTK">
 
     <Grid>
         <GroupBox Header="联发科">
-
+            <Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="5"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid>
+                        <Border CornerRadius="10" BorderBrush="Gray" BorderThickness="0.5">
+                            <WrapPanel>
+                                <Border Height="30" HorizontalAlignment="Left" CornerRadius="10" BorderBrush="Gray" BorderThickness="0.5">
+                                    <Button Click="FlushFencusButton_Click" x:Name="FlushFencusButton" MinWidth="50" BorderBrush="Transparent" Background="Transparent" Content="刷写分区" Margin="10,0,10,0"/>
+                                </Border>
+                                <Border Height="30" HorizontalAlignment="Left" CornerRadius="10" BorderBrush="Gray" BorderThickness="0.5">
+                                    <Button Click="FlashItButton_Click" x:Name="FlashItButton" MinWidth="50" BorderBrush="Transparent" Background="Transparent" Content="刷机操作" Margin="10,0,10,0"/>
+                                </Border>
+                                <Border Height="30" HorizontalAlignment="Left" CornerRadius="10" BorderBrush="Gray" BorderThickness="0.5">
+                                    <Button Click="FkLoackButton_Click" x:Name="FkLoackButton" MinWidth="50" BorderBrush="Transparent" Background="Transparent" Content="锁管理" Margin="10,0,10,0"/>
+                                </Border>
+                                <Border Height="30" HorizontalAlignment="Left" CornerRadius="10" BorderBrush="Gray" BorderThickness="0.5">
+                                    <Button Click="SystemiesButton_Click" x:Name="SystemiesButton" MinWidth="50" BorderBrush="Transparent" Background="Transparent" Content="系统操作" Margin="10,0,10,0"/>
+                                </Border>
+                            </WrapPanel>
+                        </Border>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Border CornerRadius="10" BorderBrush="Gray" BorderThickness="0.5">
+                            <Frame Margin="5" NavigationUIVisibility="Hidden" x:Name="Foncin"/>
+                        </Border>
+                    </Grid>
+                </Grid>
+            </Grid>
         </GroupBox>
     </Grid>
 </Page>

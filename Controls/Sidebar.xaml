@@ -18,7 +18,7 @@
                 <cn:SidebarItem x:Name="MTK" ButtonIcon="/Resources/Block.png" ButtonText="联发科" VerticalAlignment="Top"/>
                 <cn:SidebarItem x:Name="Unisoc" ButtonIcon="/Resources/Block.png" ButtonText="展锐" VerticalAlignment="Top"/>
                 <cn:SidebarItem x:Name="RK" ButtonIcon="/Resources/Block.png" ButtonText="瑞芯微" VerticalAlignment="Top"/>
-                <cn:SidebarItem x:Name="AndroidCat" ButtonIcon="/Resources/Editor.png" ButtonText="ADB/FastBoot" VerticalAlignment="Top"/>
+                <cn:SidebarItem x:Name="AndroidCat" ButtonIcon="/Resources/Editor.png" ButtonText="ADB/FB" VerticalAlignment="Top"/>
                 <cn:SidebarItem ButtonIcon="/Resources/Settings.png" ButtonText="设置" VerticalAlignment="Top"/>
             </WrapPanel>
         </ScrollViewer>
