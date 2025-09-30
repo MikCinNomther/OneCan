@@ -24,5 +24,15 @@ namespace OneCan.MediaTek.Pages
         {
             InitializeComponent();
         }
+
+        private void UnlockBootLoader_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void LockBootloader_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

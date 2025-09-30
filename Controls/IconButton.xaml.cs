@@ -20,8 +20,17 @@ namespace OneCan.Controls
     /// </summary>
     public partial class IconButton : UserControl
     {
-        public ImageSource Icon { get; set; }
-        public String Text { get; set; }
+        public ImageSource Icon { get
+            {
+                return ImageBox.Source;
+            } set { 
+                ImageBox.Source = value;
+            } }
+        public String Text { get { 
+                return TextBox.Text;
+            } set { 
+                TextBox.Text = value;
+            } }
 
         public EventHandler EventHandler { get; set; } = new EventHandler((sender, e) => { });
         public IconButton()
@@ -29,8 +38,6 @@ namespace OneCan.Controls
             InitializeComponent();
             this.Loaded += (sender, e) =>
             {
-                this.ImageBox.Source = Icon;
-                this.TextBox.Text = Text;
                 this.DasButton.Click += (sender, e) =>
                 {
                     EventHandler.Invoke(sender, e);

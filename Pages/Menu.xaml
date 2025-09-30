@@ -40,12 +40,12 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <cn:IconButton x:Name="GoToGithub" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
-                                <cn:IconButton Grid.Row="0" Grid.Column="1" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
-                                <cn:IconButton Grid.Row="0" Grid.Column="2" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
-                                <cn:IconButton Grid.Row="1" Grid.Column="0" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
-                                <cn:IconButton Grid.Row="1" Grid.Column="1" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
-                            <cn:IconButton Grid.Row="1" Grid.Column="2" Text="GitHub" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton x:Name="GoToGithub" Text="GitHub" ToolTip="在 GitHub 上查看此项目" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton Grid.Row="0" Grid.Column="1" Text="工作目录" ToolTip="打开此程序的工作目录" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton Grid.Row="0" Grid.Column="2" Text="帮助" ToolTip="查看有关此程序的帮助" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton Grid.Row="1" Grid.Column="0" Text="必要补全" ToolTip="获取运行此程序所必须的组件" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton Grid.Row="1" Grid.Column="1" Text="报告Bug" ToolTip="发现了Bug?请向我们报告！" Icon="/Resources/ProjectFile.png"/>
+                            <cn:IconButton Grid.Row="1" Grid.Column="2" Text="联系我们" ToolTip="您可能发现了有意思的事，或者是一时的突发奇想！" Icon="/Resources/ProjectFile.png"/>
                         </Grid>
                     </Grid>
                 </Grid>

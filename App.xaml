@@ -2,15 +2,19 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:OneCan"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!--
-        <SolidColorBrush Color="Black" x:Key="GridBackground"/>
-        <SolidColorBrush Color="White" x:Key="Foreground"/>
-        --><SolidColorBrush Color="White" x:Key="GridBackground"/>
+
+        <sys:Double x:Key="FontSize">
+            12
+        </sys:Double>
+        
+        <SolidColorBrush Color="White" x:Key="GridBackground"/>
         <SolidColorBrush Color="Black" x:Key="Foreground"/>
         <Style TargetType="TextBlock">
             <Setter Property="Foreground" Value="{DynamicResource Foreground}"/>
+            <Setter Property="FontSize" Value="{DynamicResource FontSize}"/>
         </Style>
         <Style TargetType="TextBox">
             <Setter Property="Foreground" Value="{DynamicResource Foreground}"/>

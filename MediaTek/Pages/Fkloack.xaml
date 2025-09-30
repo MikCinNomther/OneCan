@@ -9,6 +9,9 @@
       Title="Fkloack">
 
     <Grid>
-        
+        <WrapPanel>
+            <Button x:Name="UnlockBootLoader" Click="UnlockBootLoader_Click" Content="解除BootLoader" Height="50" Width="150" Margin="10"/>
+            <Button x:Name="LockBootloader" Click="LockBootloader_Click" Content="锁定BootLoader" Height="50" Width="150" Margin="10"/>
+        </WrapPanel>
     </Grid>
 </Page>
