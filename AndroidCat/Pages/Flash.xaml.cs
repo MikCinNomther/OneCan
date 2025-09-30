@@ -39,7 +39,7 @@ namespace AndroidCat.Pages
             if (file == null)
                 return;
             CMD cmd = new CMD();
-            cmd.System($"fastboot flash recovery \"{file}\"");
+            cmd.SystemCK($"fastboot flash recovery \"{file}\"");
         }
 
         private void IconTextButton_Click_1(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace AndroidCat.Pages
             if (file == null)
                 return;
             CMD cmd = new CMD();
-            cmd.System($"fastboot flash boot \"{file}\"");
+            cmd.SystemCK($"fastboot flash boot \"{file}\"");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace AndroidCat.Pages
             if (file == null)
                 return;
             CMD cmd = new CMD();
-            cmd.System($"adb install \"{file}\"");
+            cmd.SystemCK($"adb install \"{file}\"");
         }
 
         private void IconTextButton_Click_1(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace AndroidCat.Pages
             if (file == null)
                 return;
             CMD cmd = new CMD();
-            cmd.System($"adb uninstall \"{file}\"");
+            cmd.SystemCK($"adb uninstall \"{file}\"");
         }
 
         private void IconTextButton_Click_2(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace AndroidCat.Pages
             if (file == null)
                 return;
             CMD cmd = new CMD();
-            cmd.System($"adb shell pm disable-user \"{file}\"");
+            cmd.SystemCK($"adb shell pm disable-user \"{file}\"");
         }
     }
 }

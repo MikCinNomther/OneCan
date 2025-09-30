@@ -34,5 +34,7 @@
             <Setter Property="Icon" Value="/Resources/Ae.ico"/>
             <Setter Property="ResizeMode" Value="CanResizeWithGrip"/>
         </Style>
+
+
     </Application.Resources>
 </Application>

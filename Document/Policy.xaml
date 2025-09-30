@@ -1,0 +1,133 @@
+﻿<Page x:Class="OneCan.Document.Policy"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OneCan.Document"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Policy">
+
+    <Grid>
+        <GroupBox Header="用户协议">
+            <Grid>
+                <ScrollViewer VerticalScrollBarVisibility="Auto" Padding="20">
+                    <StackPanel>
+                        <!-- 标题 -->
+                        <Border BorderBrush="#0078D4" BorderThickness="0,0,0,2" Margin="0,0,0,20" Padding="0,0,0,10">
+                            <TextBlock Text="用户协议" 
+                          FontSize="24" 
+                          FontWeight="Bold" 
+                          HorizontalAlignment="Center"
+                          Foreground="#0078D4"/>
+                        </Border>
+
+                        <!-- 重要提示 -->
+                        <Border Background="#FFF0F0F0" 
+                    BorderBrush="#0078D4" 
+                    BorderThickness="1" 
+                    CornerRadius="4"
+                    Padding="15"
+                    Margin="0,0,0,20">
+                            <TextBlock Text="如果您使用了该程序，则默认您已经接受了该用户协议"
+                          FontWeight="SemiBold"
+                          TextWrapping="Wrap"/>
+                        </Border>
+
+                        <!-- 一、软件性质与风险告知 -->
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="一、软件性质与风险告知" 
+                          FontSize="16" 
+                          FontWeight="Bold"
+                          Foreground="#0078D4"
+                          Margin="0,0,0,10"/>
+
+                            <StackPanel Margin="20,0,0,0">
+                                <TextBlock Text="1.1 本软件为技术工具，用于电子设备的固件刷写操作。使用者需具备相应的技术知识。"
+                              TextWrapping="Wrap"
+                              Margin="0,0,0,5"/>
+                                <TextBlock Text="1.2 刷机操作可能导致设备失去官方保修、系统不稳定、数据丢失甚至设备损坏等风险。您应自行备份重要数据并承担所有相关风险。"
+                              TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- 二、知识产权声明 -->
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="二、知识产权声明" 
+                          FontSize="16" 
+                          FontWeight="Bold"
+                          Foreground="#0078D4"
+                          Margin="0,0,0,10"/>
+
+                            <StackPanel Margin="20,0,0,0">
+                                <TextBlock Text="2.1 本软件基于多个开源项目开发，遵守各开源项目的授权条款"
+                              TextWrapping="Wrap"
+                              Margin="0,0,0,5"/>
+                                <TextBlock Text="2.2 相关开源项目的源代码及授权信息可在软件目录的&quot;LICENSES&quot;文件夹中查看，或通过软件&quot;关于&quot;菜单获取。"
+                              TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- 三、开源代码遵守义务 -->
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="三、开源代码遵守义务" 
+                          FontSize="16" 
+                          FontWeight="Bold"
+                          Foreground="#0078D4"
+                          Margin="0,0,0,10"/>
+
+                            <StackPanel Margin="20,0,0,0">
+                                <TextBlock Text="3.1 根据所继承开源项目的授权要求，本软件相关组件的源代码可在项目官方网站或代码托管平台获取。"
+                              TextWrapping="Wrap"
+                              Margin="0,0,0,5"/>
+                                <TextBlock Text="3.2 任何基于本软件进行的修改、再分发，必须遵守原始开源协议的相应规定。"
+                              TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- 四、使用限制与免责 -->
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="四、使用限制与免责" 
+                          FontSize="16" 
+                          FontWeight="Bold"
+                          Foreground="#0078D4"
+                          Margin="0,0,0,10"/>
+
+                            <StackPanel Margin="20,0,0,0">
+                                <TextBlock Text="4.1 禁止将本软件用于商业销售而不提供相应源代码（如适用）"
+                              TextWrapping="Wrap"
+                              Margin="0,0,0,5"/>
+                                <TextBlock Text="4.2 禁止将本软件用于任何非法用途或侵害他人权益的行为"
+                              TextWrapping="Wrap"
+                              Margin="0,0,0,5"/>
+                                <TextBlock Text="4.3 本软件按&quot;原样&quot;提供，开发者不承担任何因使用本软件而产生的直接或间接责任"
+                              TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- 五、其他条款 -->
+                        <StackPanel Margin="0,0,0,20">
+                            <TextBlock Text="五、其他条款" 
+                          FontSize="16" 
+                          FontWeight="Bold"
+                          Foreground="#0078D4"
+                          Margin="0,0,0,10"/>
+
+                            <StackPanel Margin="20,0,0,0">
+                                <TextBlock Text="5.1 本协议未明示授权的其他权利均由版权人保留"
+                              TextWrapping="Wrap"
+                              Margin="0,0,0,5"/>
+                                <TextBlock Text="5.2 如有条款与开源协议冲突，以开源协议为准"
+                              TextWrapping="Wrap"
+                              Margin="0,0,0,5"/>
+                                <TextBlock Text="5.3 开发者保留随时修改本协议的权利，恕不另行通知"
+                              TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Page>

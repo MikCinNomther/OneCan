@@ -31,7 +31,7 @@ namespace NWC_Control
 {
     public class CMD
     {
-        private Process process = new Process()
+        public Process process = new Process()
         {
             StartInfo = new ProcessStartInfo()
             {
@@ -39,6 +39,47 @@ namespace NWC_Control
                 RedirectStandardInput = true
             }
         };
+
+        public void SystemCK(string Command)
+        {
+            string Runnable = Command.Substring(0,Command.IndexOf(" "));
+            string Arguments = Command.Substring(Command.IndexOf(" ")+1);
+            if(Runnable.IndexOf(".exe") < 0)
+            {
+                Runnable += ".exe";
+            }
+            SystemCK(Runnable, Arguments);
+        }
+
+        public void SystemCK(string ExecutableFile,string Command)
+        {
+            Process process = new Process()
+            {
+                StartInfo = new ProcessStartInfo()
+                {
+                    FileName = ExecutableFile,
+                    RedirectStandardInput = true,
+                    Arguments = Command,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    CreateNoWindow = true
+                }
+            };
+            new Thread(() =>
+            {
+                process.Start();
+                string rt = process.StandardOutput.ReadToEnd(),re = process.StandardError.ReadToEnd();
+                process.WaitForExit();
+                if (process.ExitCode != 0)
+                {
+                    MessageBox.Show(re,"错误",MessageBoxButton.OK,MessageBoxImage.Error);
+                }
+                else
+                {
+                    MessageBox.Show(rt,"完成",MessageBoxButton.OK,MessageBoxImage.Information);
+                }
+            }).Start();
+        }
 
         public CMD(String Argunment = "") {
             process.StartInfo.Arguments = Argunment;

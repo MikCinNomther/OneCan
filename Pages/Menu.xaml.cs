@@ -1,6 +1,8 @@
-﻿using OneCan.Kernel;
+﻿using OneCan.Document;
+using OneCan.Kernel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +27,8 @@ namespace OneCan.Pages
         {
             InitializeComponent();
         }
-
+        static Help Help = new Help();
+        static Policy Policy = new Policy();
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             this.GoToGithub.DasButton.Click += (sender, e) =>
@@ -33,6 +36,19 @@ namespace OneCan.Pages
                 Conhost conhost = new Conhost("cmd.exe",null,true,false,true);
                 conhost.StartWithCommand("start http://github.com/MikCinNomther/OneCan");
             };
+            this.WorkPath.DasButton.Click += (sender, e) =>
+            {
+                Conhost conhost = new Conhost("cmd.exe", null, true, false, true);
+                conhost.StartWithCommand($"explorer \"{new FileInfo(this.GetType().Assembly.Location).DirectoryName}\"");
+            };
+            this.GetHelp.DasButton.Click+= (sender, e) =>
+            {
+                MainWindow.App.TranaFrame(Help);
+            };
+            this.UserPolicy.DasButton.Click += new RoutedEventHandler((sender, e) =>
+            {
+                MainWindow.App.TranaFrame(Policy);
+            });
         }
     }
 }
