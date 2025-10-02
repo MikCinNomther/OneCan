@@ -38,9 +38,9 @@
                     <ColumnDefinition Width="180"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image Margin="20" Source="/AndroidCat/emo_im_laughing.png"/>
+                <Image Margin="20" Source="/Resources/Android.png"/>
                 <Button Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
-                    <TextBlock Text="1.0.0" Foreground="Blue" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" TextDecorations="Underline"/>
+                    <TextBlock Text="1.4.0" Foreground="Blue" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown" TextDecorations="Underline"/>
                 </Button>
                 <GroupBox Header="" Margin="0,5,5,5" Grid.Column="1">
                     <Grid>

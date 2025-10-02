@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Media.Animation;
 
 namespace Update
 {
@@ -31,6 +32,37 @@ namespace NWC_Control
 {
     public class CMD
     {
+        public static async Task<string> RunCMD(string command)
+        {
+            string runnable = command.Substring(0, command.IndexOf(" "));
+            string arguments = command.Substring(command.IndexOf(" ") + 1);
+
+            using Process process = new Process()
+            {
+                StartInfo = new ProcessStartInfo()
+                {
+                    FileName = runnable,
+                    Arguments = arguments,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true
+                }
+            };
+
+            process.Start();
+
+            // 异步读取输出和错误
+            var outputTask = process.StandardOutput.ReadToEndAsync();
+            var errorTask = process.StandardError.ReadToEndAsync();
+
+            // 等待进程退出和读取完成
+            await process.WaitForExitAsync();
+            string output = await outputTask;
+            string error = await errorTask;
+
+            return output + error;
+        }
         public Process process = new Process()
         {
             StartInfo = new ProcessStartInfo()
@@ -67,16 +99,16 @@ namespace NWC_Control
             };
             new Thread(() =>
             {
-                process.Start();
-                string rt = process.StandardOutput.ReadToEnd(),re = process.StandardError.ReadToEnd();
-                process.WaitForExit();
-                if (process.ExitCode != 0)
-                {
-                    MessageBox.Show(re,"错误",MessageBoxButton.OK,MessageBoxImage.Error);
+            process.Start();
+            string rt = process.StandardOutput.ReadToEnd(), re = process.StandardError.ReadToEnd();
+            process.WaitForExit();
+            if (process.ExitCode != 0)
+            {
+                Application.Current.Dispatcher.BeginInvoke(() => { MessageBox.Show(re, "错误", MessageBoxButton.OK, MessageBoxImage.Error); });
                 }
                 else
                 {
-                    MessageBox.Show(rt,"完成",MessageBoxButton.OK,MessageBoxImage.Information);
+                    Application.Current.Dispatcher.BeginInvoke(() => { MessageBox.Show(rt, "完成", MessageBoxButton.OK, MessageBoxImage.Information); });
                 }
             }).Start();
         }

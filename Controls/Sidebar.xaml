@@ -14,11 +14,11 @@
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
             <WrapPanel>
                 <cn:SidebarItem x:Name="Home" ButtonIcon="/Resources/Home.png" ButtonText="主页" VerticalAlignment="Top"/>
-                <cn:SidebarItem x:Name="QM" ButtonIcon="/Resources/Block.png" ButtonText="高通" VerticalAlignment="Top"/>
-                <cn:SidebarItem x:Name="MTK" ButtonIcon="/Resources/Block.png" ButtonText="联发科" VerticalAlignment="Top"/>
-                <cn:SidebarItem x:Name="Unisoc" ButtonIcon="/Resources/Block.png" ButtonText="展锐" VerticalAlignment="Top"/>
-                <cn:SidebarItem x:Name="RK" ButtonIcon="/Resources/Block.png" ButtonText="瑞芯微" VerticalAlignment="Top"/>
-                <cn:SidebarItem x:Name="AndroidCat" ButtonIcon="/Resources/Editor.png" ButtonText="ADB/FB" VerticalAlignment="Top"/>
+                <cn:SidebarItem x:Name="QM" ButtonIcon="/Resources/GT.png" ButtonText="高通" VerticalAlignment="Top"/>
+                <cn:SidebarItem x:Name="MTK" ButtonIcon="/Resources/LFK.png" ButtonText="联发科" VerticalAlignment="Top"/>
+                <cn:SidebarItem x:Name="Unisoc" ButtonIcon="/Resources/Zhanrui.png" ButtonText="展锐" VerticalAlignment="Top"/>
+                <cn:SidebarItem x:Name="RK" ButtonIcon="/Resources/RK.png" ButtonText="瑞芯微" VerticalAlignment="Top"/>
+                <cn:SidebarItem x:Name="AndroidCat" ButtonIcon="/Resources/ActionDebug.png" ButtonText="ADB/FB" VerticalAlignment="Top"/>
                 <cn:SidebarItem ButtonIcon="/Resources/Settings.png" ButtonText="设置" VerticalAlignment="Top"/>
             </WrapPanel>
         </ScrollViewer>

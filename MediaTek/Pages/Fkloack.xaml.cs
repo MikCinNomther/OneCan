@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NWC_Control;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,12 +28,14 @@ namespace OneCan.MediaTek.Pages
 
         private void UnlockBootLoader_Click(object sender, RoutedEventArgs e)
         {
-
+            CMD cMD = new CMD();
+            cMD.SystemCK("python mtk e metadata,userdata,md_udc python mtk seccfg unlock");
         }
 
         private void LockBootloader_Click(object sender, RoutedEventArgs e)
         {
-
+            CMD cMD = new CMD();
+            cMD.SystemCK("python mtk seccfg lock");
         }
     }
 }

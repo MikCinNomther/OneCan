@@ -161,6 +161,8 @@ namespace OneCan
         bool DontTana = false;
         public void TranaFrame(Page frame)
         {
+            if (frame == this.NowFrame.Content)
+                return;
             if (DontTana)
                 return;
             DontTana = true;

@@ -25,12 +25,19 @@
     <None Remove="AndroidCat\Resource\twospac.png" />
     <None Remove="AndroidCat\Resource\usad.png" />
     <None Remove="AndroidCat\Resource\web1n.png" />
+    <None Remove="Resources\ActionDebug.png" />
     <None Remove="Resources\Ae.ico" />
+    <None Remove="Resources\Android.png" />
     <None Remove="Resources\Block.png" />
+    <None Remove="Resources\Connection.png" />
     <None Remove="Resources\Editor.png" />
+    <None Remove="Resources\GT.png" />
     <None Remove="Resources\Home.png" />
+    <None Remove="Resources\LFK.png" />
     <None Remove="Resources\ProjectFile.png" />
+    <None Remove="Resources\RK.png" />
     <None Remove="Resources\Settings.png" />
+    <None Remove="Resources\Zhanrui.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,13 +57,20 @@
     <Resource Include="AndroidCat\Resource\twospac.png" />
     <Resource Include="AndroidCat\Resource\usad.png" />
     <Resource Include="AndroidCat\Resource\web1n.png" />
+    <Resource Include="Resources\ActionDebug.png" />
     <Resource Include="Resources\Ae.ico" />
+    <Resource Include="Resources\Android.png" />
     <Resource Include="Resources\Block.png" />
+    <Resource Include="Resources\Connection.png" />
     <Resource Include="Resources\Editor.png" />
+    <Resource Include="Resources\GT.png" />
     <Resource Include="Resources\Home.png" />
+    <Resource Include="Resources\LFK.png" />
     <Resource Include="Resources\ProjectFile.png" />
+    <Resource Include="Resources\RK.png" />
     <Resource Include="Resources\Settings.png" />
     <Resource Include="Resources\Style.png" />
+    <Resource Include="Resources\Zhanrui.png" />
   </ItemGroup>
 
 </Project>

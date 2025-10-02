@@ -20,16 +20,21 @@ namespace OneCan.Controls
     /// </summary>
     public partial class SidebarItem : UserControl
     {
-        public ImageSource ButtonIcon { get; set; }
-        public String ButtonText { get; set; }
+        public ImageSource ButtonIcon { get {
+                return this.DasIcon.Source;
+            } set { 
+                this.DasIcon.Source = value;
+            } }
+        public String ButtonText { get { 
+                return DasText.Text;
+            } set { 
+                DasText.Text = value;
+            } }
+
+
         public SidebarItem()
         {
             InitializeComponent();
-            this.Loaded += (sender, e) =>
-            {
-                this.DasIcon.Source = ButtonIcon;
-                this.DasText.Text = ButtonText;
-            };
         }
         public SidebarItem(ImageSource Icon,String Text)
         {

@@ -1,4 +1,5 @@
-﻿using OneCan.Document;
+﻿using NWC_Control;
+using OneCan.Document;
 using OneCan.Kernel;
 using System;
 using System.Collections.Generic;
@@ -48,6 +49,56 @@ namespace OneCan.Pages
             this.UserPolicy.DasButton.Click += new RoutedEventHandler((sender, e) =>
             {
                 MainWindow.App.TranaFrame(Policy);
+            });
+            this.CheckInvironment.DasButton.Click += new RoutedEventHandler((sender, e) =>
+            {
+                new Thread(async () =>
+                {
+                    bool Python = true;
+                    string PyVer = null;
+                    try
+                    {
+                        PyVer = await CMD.RunCMD("python --version");
+                    }
+                    catch
+                    {
+                        Python = false;
+                    }
+
+                    bool MTK = true;
+                    string MTKVer = null;
+                    try
+                    {
+                        MTKVer = await CMD.RunCMD("mtk version");
+                    }
+                    catch
+                    {
+                        MTK = false;
+                    }
+                    if (Python && MTK)
+                    {
+                        this.Dispatcher.BeginInvoke(() =>
+                        {
+                            MessageBox.Show("您的必要依赖已就绪。","完成",MessageBoxButton.OK,MessageBoxImage.Information);
+                        });
+                    }
+                    else
+                    {
+                        StringBuilder stringBuilder = new StringBuilder("您还需要安装以下依赖：");
+                        if(Python == false)
+                        {
+                            stringBuilder.Append("\r\n\tPython");
+                        }
+                        if (MTK == false)
+                        {
+                            stringBuilder.Append("\r\n\tMTKClient");
+                        }
+                        this.Dispatcher.BeginInvoke(() =>
+                        {
+                            MessageBox.Show(stringBuilder.ToString(), "问题", MessageBoxButton.OK, MessageBoxImage.Error);
+                        });
+                    }
+                }).Start();
             });
         }
     }

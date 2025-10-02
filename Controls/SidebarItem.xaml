@@ -10,7 +10,7 @@
         <Border CornerRadius="4" BorderBrush="Gray" BorderThickness="1">
         <Button Background="{DynamicResource GridBackground}" BorderBrush="Transparent" Click="Button_Click">
             <Grid Height="80" Width="80">
-                <Image x:Name="DasIcon" Width="60" Height="60" VerticalAlignment="Top"/>
+                <Image Margin="0,0,0,20" x:Name="DasIcon" Width="60" Height="60" VerticalAlignment="Center"/>
                 <TextBlock Foreground="{DynamicResource Foreground}" HorizontalAlignment="Center" x:Name="DasText" FontSize="12" VerticalAlignment="Bottom" Margin="0,0,0,5"/>
             </Grid>
         </Button>

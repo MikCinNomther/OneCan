@@ -43,7 +43,7 @@
                                 <cn:IconButton x:Name="GoToGithub" Text="GitHub" ToolTip="在 GitHub 上查看此项目" Icon="/Resources/ProjectFile.png"/>
                                 <cn:IconButton x:Name="WorkPath" Grid.Row="0" Grid.Column="1" Text="工作目录" ToolTip="打开此程序的工作目录" Icon="/Resources/ProjectFile.png"/>
                                 <cn:IconButton x:Name="GetHelp" Grid.Row="0" Grid.Column="2" Text="帮助" ToolTip="查看有关此程序的帮助" Icon="/Resources/ProjectFile.png"/>
-                                <cn:IconButton Grid.Row="1" Grid.Column="0" Text="检查依赖" ToolTip="获取运行此程序所必须的组件" Icon="/Resources/ProjectFile.png"/>
+                                <cn:IconButton x:Name="CheckInvironment" Grid.Row="1" Grid.Column="0" Text="检查依赖" ToolTip="获取运行此程序所必须的组件" Icon="/Resources/ProjectFile.png"/>
                                 <cn:IconButton x:Name="UserPolicy" Grid.Row="1" Grid.Column="1" Text="用户协议" ToolTip="查看用户协议" Icon="/Resources/ProjectFile.png"/>
                             <cn:IconButton Grid.Row="1" Grid.Column="2" Text="联系我们" ToolTip="发现了Bug?或者发现了有意思的事？" Icon="/Resources/ProjectFile.png"/>
                         </Grid>

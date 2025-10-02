@@ -67,25 +67,25 @@ namespace AndroidCat
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             CMD cmd = new CMD();
-            cmd.System("adb reboot system");
+            cmd.SystemCK("adb reboot system");
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             CMD cmd = new CMD();
-            cmd.System("adb reboot recovery");
+            cmd.SystemCK("adb reboot recovery");
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             CMD cmd = new CMD();
-            cmd.System("adb reboot fastboot");
+            cmd.SystemCK("adb reboot fastboot");
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
             CMD cmd = new CMD();
-            cmd.System("adb reboot edl");
+            cmd.SystemCK("adb reboot edl");
         }
 
         private void FlashDeviceInfo_Click(object sender, RoutedEventArgs e)
@@ -192,6 +192,7 @@ namespace AndroidCat
         private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             CMD cMD = new CMD();
+            cMD.process.StartInfo.CreateNoWindow = true;
             cMD.System("start http://120.79.153.186/AndroidCat/Menu.html");
         }
     }
