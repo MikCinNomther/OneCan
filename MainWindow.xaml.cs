@@ -222,5 +222,15 @@ namespace OneCan
         {
             this.NowFrame.Content = ApplicationValues.Menu;
         }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            this.Corvertion.Visibility = Visibility.Hidden;
+        }
+
+        private void Window_Deactivated(object sender, EventArgs e)
+        {
+            this.Corvertion.Visibility = Visibility.Visible;
+        }
     }
 }

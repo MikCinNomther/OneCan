@@ -5,6 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OneCan"
         mc:Ignorable="d"
+        Activated="Window_Activated"
+        Deactivated="Window_Deactivated"
         Loaded="Window_Loaded"
         xmlns:cn="clr-namespace:OneCan.Controls"
         Height="450" Width="800"
@@ -72,5 +74,6 @@
             <Grid Background="Gray" Width="0.5" HorizontalAlignment="Left" Margin="79.75,0,0,0" Grid.Column="0" Grid.ColumnSpan="2"/>
         </Grid>
         <Border Grid.Row="0" Grid.RowSpan="2" BorderBrush="Gray" Margin="0,30,0,0" CornerRadius="0,0,10,10" BorderThickness="1.5,0,1.5,1.5"/>
+        <Grid Focusable="False" IsHitTestVisible="False" x:Name="Corvertion" Visibility="Hidden" Grid.RowSpan="2" Background="#4F000000"/>
     </Grid>
 </Window>
