@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -220,7 +220,7 @@ namespace OneCan
         int Taname = 1;
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.NowFrame.Content = ApplicationValues.Menu;
+            this.NowFrame.Content = ApplicationValues.QcomPage;
         }
     }
 }

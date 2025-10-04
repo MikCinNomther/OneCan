@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,7 +33,7 @@ namespace OneCan.Controls
             };
             this.QM.Click += (sender, e) =>
             {
-                MainWindow.App.TranaFrame(ApplicationValues.QM);
+                MainWindow.App.TranaFrame(ApplicationValues.QcomPage);
             };
             this.MTK.Click += (sender, e) =>
             {

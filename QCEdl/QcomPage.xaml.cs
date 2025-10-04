@@ -13,16 +13,21 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace OneCan.Pages
+namespace OneCan.QCEdl
 {
     /// <summary>
-    /// QM.xaml 的交互逻辑
+    /// QcomPage.xaml 的交互逻辑
     /// </summary>
-    public partial class QM : Page
+    public partial class QcomPage : Page
     {
-        public QM()
+        public QcomPage()
         {
             InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
